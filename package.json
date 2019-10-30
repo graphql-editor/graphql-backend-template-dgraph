@@ -5,7 +5,7 @@
   "author": "Artur Czemiel",
   "license": "MIT",
   "scripts": {
-    "dgraph": "docker run -v $(pwd):/dgraph -p 9000:9000  -it dgraph/standalone:graphql",
+    "dgraph": "docker run -v \"$(pwd):/dgraph\" -p 9000:9000  -it dgraph/standalone:graphql",
     "inject-dgraph-schema": "schema=$(cat schema.graphql | tr '\n' ' ');jq -n --arg schema \"$schema\" '{ query: \"mutation addSchema($sch: String!) { addSchema(input: { schema: $sch }) { schema { schema } } }\", variables: { sch: $schema }}' | curl -X POST -H \"Content-Type: application/json\" http://localhost:9000/admin -d @-",
     "generate-nodejs": "mkdir ./generated-nodejs && -p zeus http://localhost:9000/graphql ./generated-nodejs -g ./generated-nodejs",
     "generate-nodets": "mkdir ./generated-nodets && zeus http://localhost:9000/graphql ./generated-nodets -g ./generated-nodets",
