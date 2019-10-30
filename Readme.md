@@ -16,6 +16,12 @@ Like that, and it is only from GraphQL Schema!! :
 
 ## Quick Start
 
+Clone this repo
+
+```
+git clone https://github.com/graphql-editor/graphql-backend-template-dgraph
+```
+
 ```sh
 npm run install
 ```
