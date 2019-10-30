@@ -16,7 +16,10 @@ Like that, and it is only from GraphQL Schema!! :
 
 ## Dependencies
 
-[Docker](https://docs.docker.com/install/) - this should be in possibly new version
+[Docker](https://docs.docker.com/install/)
+[jq](https://stedolan.github.io/jq/) 
+
+These 2 are needed to run this
 
 `npm`
 
