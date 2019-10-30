@@ -14,6 +14,12 @@ Like that, and it is only from GraphQL Schema!! :
 
 ![](graphqldgraph.gif)
 
+## Dependencies
+
+[Docker](https://docs.docker.com/install/)
+
+`npm`
+
 ## Quick Start
 
 Clone this repo
