@@ -16,7 +16,7 @@ Like that, and it is only from GraphQL Schema!! :
 
 ## Dependencies
 
-[Docker](https://docs.docker.com/install/)
+[Docker](https://docs.docker.com/install/) - this should be in possibly new version
 
 `npm`
 
@@ -29,12 +29,16 @@ git clone https://github.com/graphql-editor/graphql-backend-template-dgraph
 ```
 
 ```sh
-npm run install
+npm install
 ```
 
-To start with this template you will need GraphQL Schema. Create one with [GraphQL Editor](https://app.graphqleditor.com) and copy its contents to `schema.graphql` file. Or if you are super lazy take one from `example-schema.graphql` and copy its contents to `schema.graphql` Remember when using Dgraph you need only Types, Interfaces and Enums. Also there is a small bug in Dgraph which doesnt allow comments in schema files.
-
+To start with this template you will need GraphQL Schema. Create one with [GraphQL Editor](https://app.graphqleditor.com) and copy its contents to `schema.graphql` file. 
 Example schema can look like this [Schema](https://app.graphqleditor.com/dgraph-testing/finance)
+Remember when using Dgraph you need only Types, Interfaces and Enums. Also there is a small bug in Dgraph which doesnt allow comments in schema files.
+
+Or if you are lazy:
+
+Forget about the schema and use one inside repo. Do nothing and proceed.
 
 Run this command in one terminal
 
