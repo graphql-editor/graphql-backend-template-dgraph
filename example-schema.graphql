@@ -1,0 +1,30 @@
+type Expense {
+  amount: Int!
+  """
+  date when expense should be classified<br>
+  """
+  id: ID!
+  date: DateTime! @search(by: [month])
+  source: Source! @hasInverse(field: "expenses")
+}
+
+type Income {
+  """
+  Date when income should be classified
+  """
+  id: ID!
+  date: DateTime! @search(by: [month])
+  paid: Boolean
+  amount: Int!
+  source: Source! @hasInverse(field: "incomes")
+}
+
+"""
+Source of income and expense<br>
+"""
+type Source {
+  id: ID!
+  name: String!
+  expenses: [Expense!] @hasInverse(field: "source")
+  incomes: [Income!] @hasInverse(field: "source")
+}
